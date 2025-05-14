@@ -1,5 +1,6 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import mimetypes
+from urllib.parse import parse_qs
 
 
 class CiteHandler(BaseHTTPRequestHandler):
@@ -56,12 +57,21 @@ class CiteHandler(BaseHTTPRequestHandler):
             self.send_error(404, "Page not found")
 
     def do_POST(self):
-        content_length = int(self.headers['Content-Length'])
-        body = self.rfile.read(content_length)
-        print(body.decode('utf-8'))
-        self.send_response(200)
-        self.end_headers()
+        if self.path == "/submit":
+            content_length = int(self.headers['Content-Length'])
+            body = self.rfile.read(content_length).decode('utf-8')
 
+            data = parse_qs(body)
+            name = data.get("name", [""])[0]
+            message = data.get("message", [""])[0]
+            print(f'Получено сообщение от {name}: {message}')
+
+            self.send_response(200)
+            self.send_header("Content-type", "text/html; charset=utf-8")
+            self.end_headers()
+
+        else:
+            self.send_error(404, "Path is not found")
 
 def run(server_class=HTTPServer, handler_class=CiteHandler):
     server_address = ('localhost', 8010)
