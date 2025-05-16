@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Магазин</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<div class="sidebar">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-basket3"
+             viewBox="0 0 25 25">
+            <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6z"/>
+        </svg>
+        <span class="fs-4">Меню</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="/main" class="nav-link active" aria-current="page">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#home"></use>
+                </svg>
+                Главная
+            </a>
+        </li>
+        <li>
+            <a href="/categories" class="nav-link text-white">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#speedometer2"></use>
+                </svg>
+                Категории
+            </a>
+        </li>
+        <li>
+            <a href="orders" class="nav-link text-white">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#table"></use>
+                </svg>
+                Заказы
+            </a>
+        </li>
+        <li>
+            <a href="/contacts" class="nav-link text-white">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#grid"></use>
+                </svg>
+                Контакты
+            </a>
+        </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1"
+           data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../static/images/sonyasha.jpg" alt="" width="32" height="32"
+                 class="rounded-circle me-2">
+            <strong>Пользователь</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">Профиль</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Выход</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="content">
+    <h1>Главная</h1>
+    <p style="color: gray">Вы находитесь на сайте, предназначенном для продажи товаров.</p>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <div class="card">
+                    <h5 class="card-header">Товар 1</h5>
+                    <div class="card-body">
+                        <h3 class="card-title">$ 100</h3>
+                        <p class="card-text">10 users included, 2 GB of storage, <br> Email support, Help center access</p>
+                        <button type="button" class="btn btn-outline-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-3">
+                <div class="card">
+                    <h5 class="card-header">Товар 1</h5>
+                    <div class="card-body">
+                        <h3 class="card-title">$ 100</h3>
+                        <p class="card-text">10 users included, 2 GB of storage, <br> Email support, Help center access</p>
+                        <button type="button" class="btn btn-outline-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+
+            <div class="col-3">
+
+                <div class="card">
+                    <h5 class="card-header">Товар 1</h5>
+                    <div class="card-body">
+                        <h3 class="card-title">$ 100</h3>
+                        <p class="card-text">10 users included, 2 GB of storage, <br> Email support, Help center access</p>
+                        <button type="button" class="btn btn-outline-primary">Купить</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
